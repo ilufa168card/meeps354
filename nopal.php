@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("purple","              MNOVALRIZKY\n");
+echo color("blue","              MNOVALRIZKY\n");
 echo color("white","        AUTO REGIST & CLAIM VOUCHER\n" );
 echo color("white","          ".hari_ini().date('m-Y H:i:s') ." \n\n ");
 echo color("white","            Format Nomor 62***\n");
@@ -36,19 +36,19 @@ function change(){
                 //kamu kena preng wkwkwk cuman echo doang bukan claim voc beneran//
                 echo "\n".color("white","           Lagi Claim Voucher!       \n");
                 echo color("white","            (Total 8 Voucher)       \n");
-                echo "\n".color("green"," [x1] Voucher Diskon GoSend 50%*");
+                echo "\n".color("green"," [x1] Voucher Diskon GoSend 50%");
                 sleep(1);
-                echo "\n".color("green"," [x1] Diskon GoFood 50%");
+                echo "\n".color("red"," [x1] Diskon GoFood 50%");
                 sleep(1);
-                echo "\n".color("green"," [x3] DISKON 50% Naik GoRide maks. Rp10.000");
+                echo "\n".color("green"," [x3] DISKON 50% GoRide maks. Rp10.000");
                 sleep(1);
-                echo "\n".color("green"," [x1] DISKON 50% Naik GoCar maks. Rp25.000");
+                echo "\n".color("green"," [x1] DISKON 50% GoCar maks. Rp25.000");
                 sleep(1);
-                echo "\n".color("green"," [x1] DISKON 50% Naik GoRide pake GoPay maks. Rp10.000");
+                echo "\n".color("blue"," [x1] DISKON 50% GoRide pake GoPay maks. Rp10.000");
                 sleep(1);
-                echo "\n".color("green"," [x1] DISKON 50% Naik GoCar pake GoPay maks. Rp30.000");
+                echo "\n".color("blue"," [x1] DISKON 50% GoCar pake GoPay maks. Rp30.000");
                 sleep(1);
-                echo "\n".color("green"," [x1] DISKON GO-FOOD 50%!");
+                echo "\n".color("red"," [x1] DISKON GO-FOOD 50%!");
                 echo "\n\n".color("white","              @mnovalrizky      ");
                 echo "\n".color("white","      Silahkan Masuk ke VMOS/AppClone");
                 for($a=1;$a<=3;$a++){
@@ -70,10 +70,10 @@ function change(){
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments');
         $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai!')){
         }else{
         $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
-        if(strpos($claim, 'Promo kamu sudah bisa dipakai')){
+        if(strpos($claim, 'Promo kamu sudah bisa dipakai!')){
 
         }else{
         echo "\n".color("red","-] Message: ".$message);
@@ -82,7 +82,7 @@ function change(){
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments',);
         $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai!')){
         echo "\n".color("green","+] Message: ".$message);
         sleep(1);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
