@@ -13,7 +13,7 @@ function change(){
         ulang:
         echo color("white","\n NOMOR : ");
         $no = trim(fgets(STDIN));
-        $data = '{"email":"'.$email.'@gmail.com","name":"Maria Ozawa","phone":"+'.$no.'","signed_up_country":"ID"}';
+        $data = '{"email":"'.$email.'@gmail.com","name":"Pesanan buat teman aku","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
