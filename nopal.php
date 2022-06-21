@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("blue","              MNOVALRIZKY\n");
+echo color("blue","              MEEPS354\n");
 echo color("white","        AUTO REGIST & CLAIM VOUCHER\n" );
 echo color("white","          ".hari_ini().date('m-Y H:i:s') ." \n\n ");
 echo color("white","            Format Nomor 628***\n");
@@ -13,7 +13,7 @@ function change(){
         ulang:
         echo color("white","\n NOMOR : ");
         $no = trim(fgets(STDIN));
-        $data = '{"email":"'.$email.'@gmail.com","name":"nopal rizky","phone":"+'.$no.'","signed_up_country":"ID"}';
+        $data = '{"email":"'.$email.'@gmail.com","name":"Maria Ozawa","phone":"+'.$no.'","signed_up_country":"ID"}';
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
@@ -49,7 +49,7 @@ function change(){
                 echo "\n".color("blue"," [x1] DISKON 50% GoCar pake GoPay maks. Rp30.000");
                 sleep(1);
                 echo "\n".color("red"," [x1] DISKON GO-FOOD 50%!");
-                echo "\n\n".color("blue","              @mnovalrizky      ");
+                echo "\n\n".color("blue","              @meeps354      ");
                 echo "\n".color("white","      Silahkan Masuk ke VMOS/AppClone");
                 for($a=1;$a<=3;$a++){
                         echo color("white",".");
